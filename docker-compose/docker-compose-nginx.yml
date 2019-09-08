@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  proxy:
+    image: nginx
+    ports:
+      - 8888:80
+    volumes:
+      - c:/html:/usr/share/nginx/html
+  

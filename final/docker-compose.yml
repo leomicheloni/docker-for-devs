@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      ASPNETCORE_URLS: http://+:5000
+  proxy:
+    build:
+      dockerfile: Dockerfile-nginx
+      context: .
+    ports:
+      - 88:80
